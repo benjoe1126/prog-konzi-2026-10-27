@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void partition_pos_neg(const int* arr, const size_t len, int* part_one, size_t* len_part_one,  int* part_two, size_t* len_part_two, bool (*fv)(const int)){
+void partition(const int* arr, const size_t len, int* part_one, size_t* len_part_one,  int* part_two, size_t* len_part_two, bool (*fv)(const int)){
     size_t p1_idx = 0;
     size_t p2_idx = 0;
     for(size_t i = 0; len > i; i++){
@@ -33,7 +33,7 @@ int main(void){
         int positives[15] = {0};
         int negatives[15] = {0};
         size_t len_pos, len_neg;
-        partition_pos_neg(arr, 15, negatives, &len_neg ,positives, &len_pos,is_even);
+        partition(arr, 15, negatives, &len_neg ,positives, &len_pos,is_even);
         print_arr("Negativ particio", negatives, len_neg);
         print_arr("Pozitiv particio", positives, len_pos);
     }
