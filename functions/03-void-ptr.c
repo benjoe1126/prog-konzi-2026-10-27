@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 void* is_it_okey() {
