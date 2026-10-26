@@ -5,15 +5,13 @@
 // regular bubble_sort with asc ordering, or descending if reversed is true
 void bubble_sort(int* elements, const size_t len, const bool reversed){
     int tmp;
-    bool should_switch;
+    bool should_switch, should_switch_reversed, should_switch_regular;
     for(size_t i = 0; len > i; i++){
         for(size_t j = i; len > j; j++){
             should_switch = false;
-            if(reversed){
-                if(elements[i] < elements[j]) should_switch = true;
-            }else {
-                if(elements[j] < elements[i]) should_switch = true;
-            }
+            should_switch_regular = !reversed && elements[j] < elements[i];
+            should_switch_reversed = reversed && elements[i] < elements[j];
+            should_switch = should_switch_regular || should_switch_reversed;
             if(should_switch){
                 tmp = elements[i];
                 elements[i] = elements[j];

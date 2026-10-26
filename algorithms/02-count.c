@@ -32,7 +32,7 @@ bool is_negative(const int a){
     return a < 0;
 }
 
-// doesent make any sense really, as only whole numbers can be even or odd, don't have a better idea atm
+// doesen't make any sense really, as only whole numbers can be even or odd, don't have a better idea atm
 bool is_even_generic(const void* num){
     return *((int*)num) % 2 == 0;
 }

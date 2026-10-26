@@ -7,7 +7,7 @@ Fontos, hogy ez NEM egy C programozás best practice útmutató, kérlek a "void
 
 ## Algorythms
 
-Az `algorythms` mappában néhány programozási tétel implementációja található, függvény pointeres, illetve 
+Az `algorithms` mappában néhány programozási tétel implementációja található, függvény pointeres, illetve 
 standard megvalósításban.
 
 ## Functions

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// find first element matching precitate fv, if no element found return -1 (altough I believe the Kiválasztás tétele expect that at least one element matches)
+// find first element matching predicate fv, if no element found return -1 (although I believe the Kiválasztás tétele expect that at least one element matches)
 int selection_indicies(const int* arr, const size_t len, bool (*fv)(int)){
     for(size_t i = 0; len > i; i++){
         if(fv(arr[i])) return i;
