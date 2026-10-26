@@ -15,7 +15,7 @@ void** clone(const void* const* arr, size_t len, size_t elem_size) {
     for (size_t i = 0; i < len; i++) {
         if (!arr[i]) continue;
         ret[i] = malloc(elem_size);
-        if (!ret[i]) {
+        if (!ret[i]) { // I lied >:)
             for (size_t j = 0; j < i; j++) free(ret[j]);
             free(ret);
             return NULL;
