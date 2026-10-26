@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 // find first element matching precitate fv, if no element found return -1 (altough I believe the Kiválasztás tétele expect that at least one element matches)
-int selection_indecies(const int* arr, const size_t len, bool (*fv)(int)){
+int selection_indicies(const int* arr, const size_t len, bool (*fv)(int)){
     for(size_t i = 0; len > i; i++){
         if(fv(arr[i])) return i;
     }
@@ -28,7 +28,7 @@ bool is_gt_50(const int a){
 
 int main(void){
     const int arr[15] = {41, 17, 89, 3, 56, 24, 71, 8, 63, 35, 91, 12, 48, 67, 29};
-    int idx_of_first_even = selection_indecies(arr, 15, is_even);
+    int idx_of_first_even = selection_indicies(arr, 15, is_even);
     const int* ptr_to_first_element_gt_50 = selection_ptr(arr,15 , is_gt_50);
     printf("Index of first even: %d\n",idx_of_first_even);
     printf("Ptr to first gt 50: %p\n",ptr_to_first_element_gt_50);
